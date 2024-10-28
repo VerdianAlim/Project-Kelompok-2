@@ -1,0 +1,147 @@
+html, body{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+*{
+  font-family: "Playwrite_DE_Grund";
+}
+
+/*flexbox halaman*/
+.ttgkami {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+/*styling button switch*/
+#tombolmode{
+  margin: 10px 1300px;
+  width: 130px;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  background: #ea1538;
+  font-size: 17px;
+  color: white;
+  transition: .3s;
+}
+/*animasi scalling + kursor night mode*/
+#tombolmode:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/*settingan gambar*/
+.gambar img {
+  width: 95%;
+  max-width: 1720px;
+  border-radius: 10px;
+  margin: 0px 43px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent); /* Fade di kedua sisi */
+}
+
+h2{
+  margin: 20px 43px;
+  font-size: 30px;
+}
+
+/*settingan visi misi*/
+.deskripsi {
+  padding: 0;
+  margin: -20px 43px;
+  text-align: justify;
+  max-width: 800px;
+  width: 95%;
+  max-width: 1720px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/*container kontributor*/
+.kontributors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  max-width: 1720px;
+  margin-bottom: 40px;
+  }
+
+/*avatar kontributor*/
+.kontributor img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 35px 20px;
+}
+
+/*settingan masing2 kontributor*/
+.kontributor {
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.9);
+  transition: .3s;
+  height: 250px;
+  width: 13%;
+  font-family: "Baskervville SC";
+  font-size: 18px;
+}
+/*animasi scalling + kursor tiap kontributor*/
+.kontributor:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/*tombol beranda*/
+.berandaButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50px;
+  background: #ea1538;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 17px;
+  transition: .4s;
+  height: 60px;
+  width: 7%;
+  transition: .3s;
+}
+.berandaButton a{
+  text-decoration: none;
+  /*text-decoration-color: white;*/
+  color: white;
+}
+
+/*animasi tombol beranda, scalling + kursor*/
+.berandaButton:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .ttgkami {
+        padding: 15px;
+    }
+  }
+  
