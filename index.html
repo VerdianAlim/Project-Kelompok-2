@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+
+      <!--link dark mode-->
+<link id="theme-stylesheet" rel="stylesheet" href="indexdark.css">
+    <title>Budaya.ID</title>
+</head>
+<body>
+  <!--container navmenu-->
+  <div class="hero">
+    <nav>
+      <h2 class="logo">Budaya<span>.ID</span></h2>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+        <!--java button night mode-->
+        <button id="tombolmode" onclick="toggleDarkMode()">NightMode</button>
+    </nav>
+  </div>
+
+  <!--macam2 budaya-->
+<h3 class="subbdy">Macam-Macam Budaya</h3>  
+  <div class="isi">
+    <ul>
+      <li>
+        <h4>Angklung</h4>
+      <video width="640" height="360" controls>
+        <source src="angklung.mp4" type="video/mp4"></video>
+        <p>Angklung adalah alat musik tradisional yang berasal dari Jawa Barat, yang terbuat dari potongan bambu. Alat musik ini terdiri dari 2 sampai 4 tabung bambu yang dirangkai menjadi satu dengan tali rotan. Tabung bambu diukir detail dan dipotong sedemikian rupa untuk menghasilkan nada tertentu ketika bingkai bambu digoyang.<a href="https://id.m.wikipedia.org/wiki/Angklung">Baca Selengkapnya.</a></p>
+      </li>
+      <li>
+        <h4>Reog</h4>
+      <video width="640" height="360" controls>
+        <source src="reog.mp4" type="video/mp4"></video>
+        <p>Reog merupakan tarian tradisional dari Ponorogo, Jawa Timur dalam arena terbuka yang berfungsi sebagai hiburan rakyat, mengandung unsur magis, penari utama adalah orang berkepala singa dengan hiasan bulu merak, dengan berat topeng mencapai 50–60 kg.<a href="https://id.m.wikipedia.org/wiki/Reog">Baca Selengkapnya.</a></p>
+      </li>
+      <li>
+        <h4>Batik</h4>
+      <video width="640" height="360" controls>
+        <source src="batik.mp4" type="video/mp4"></video>
+        <p>Batik merupakan teknik pewarnaan kain yang menggunakan lilin untuk menahan warna pada bagian tertentu, menciptakan pola yang indah. Ini adalah salah satu warisan budaya Indonesia yang kaya, dengan beragam motif dan filosofi di baliknya. Batik sering digunakan untuk pakaian dan berbagai produk tekstil, dan diakui sebagai salah satu warisan budaya tak benda oleh UNESCO.<a href="https://id.m.wikipedia.org/wiki/Batik">Baca Selengkapnya.</a></p>
+      </li>
+      <li>
+      <h4>Tari Kecak</h4>
+      <video width="640" height="360" controls>
+        <source src="tarikecak.mp4" type="video/mp4"></video>
+        <p>Tarian tersebut berasal dari Pulau Bali. Pulau yang terkenal akan destinasi wisata yang cukup banyak tersebut, memiliki tarian yang unik bernama Kecak. Dengan keunikan menjadikan tarian tersebut disukainya oleh beberapa masyarakat pendatang yang berminat untuk mempelajarinya. “Cak, Cak, Cak” itulah suara khas yang biasa kamu dengar ketika melihat pertunjukan Tari Kecak Bali. Tarian Kecak ini merupakan sebuah seni drama tari yang diperankan oleh 50 sampai 150 orang penari..<a href="https://id.wikipedia.org/wiki/Kecak">Baca Selengkapnya.</a></p>
+      </li>
+      <li>
+        <h4>Songket</h4>
+        <video width="640" height="360" controls>
+          <source src="songket.mp4" type="video/mp4"></video>
+          <p>Salah satu kain tradisional yang sudah melegenda adalah songket Silungkang, yang berasal dari Sumatera Barat. Songket Silungkang menjadi salah satu bentuk seni tenun tradisional yang memiliki sejarah dan kekayaan budaya mendalam.<a href="https://id.wikipedia.org/wiki/Songket">Baca Selengkapnya.</a></p>
+        </li>
+    </ul>
+  </div>
+
+
+<script>
+// Fungsi untuk mengganti stylesheet
+function switchStyleSheet(isDarkMode) {
+  const stylesheet = document.getElementById('theme-stylesheet');
+  if (isDarkMode) {
+    stylesheet.href = 'indexdark.css';
+    localStorage.setItem('darkMode', 'true');
+  } else {
+    stylesheet.href = 'index.css';
+    localStorage.setItem('darkMode', 'false');
+  }
+}
+
+// Fungsi untuk beralih mode
+function toggleDarkMode() {
+    const isCurrentlyDark = localStorage.getItem('darkMode') === 'true';
+    switchStyleSheet(!isCurrentlyDark);
+    
+    // Mengubah teks tombol
+    const button = document.getElementById('tombolmode');
+    button.textContent = isCurrentlyDark ? 'Mode Malam' : 'Mode Normal'; // Ubah teks tombol
+}
+
+
+// Saat halaman dimuat, terapkan preferensi pengguna
+window.onload = function() {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    switchStyleSheet(isDarkMode);
+    
+    // Mengubah teks tombol sesuai mode
+    const button = document.getElementById('tombolmode');
+    button.textContent = isDarkMode ? 'Mode Normal' : 'Mode Malam'; // Ubah teks tombol
+};
+</script>
+
+
+<footer>
+  <p>©Budaya.ID 2024 CopyRight</p>
+</footer>
+  
+</body>
+</html>
