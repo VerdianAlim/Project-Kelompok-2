@@ -1,0 +1,170 @@
+html,body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Sans-Serif, Times New Roman, Times;
+  box-sizing: border-box;
+  background-color: white;
+  color: black;
+}
+*{
+  font-family: Playwrite_DE_Grund;
+}
+          
+/*wadah navbar*/
+.hero{
+  height: 10%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.915);
+  background-size: cover;
+  background-position: center;
+}
+
+/*flexbox untuk navbar*/
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 0px;
+  font-size: 25px;
+  
+}
+
+/*logo budaya.id*/
+.logo{
+  color: white;
+  padding: 0 0;
+}
+/*warna merah pada .id*/
+span{
+  color: #ea1538;
+}
+
+/*menghilangkan bulet di navbar*/
+nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 50px;
+}
+
+/*settingan beranda dan tentang kami*/
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 0px;
+  font-size: 23px;
+}
+
+/*tombol lainnya*/
+#tombolmode{
+  border: none;
+  background: #ea1538;
+  padding: 12px;
+  border-radius: 30px;
+  color: white;
+  /*font-weight: bold;*/
+  font-size: 17px;
+  transition: .3s;
+}
+
+/*macam budaya*/
+.subbdy{
+  padding-top: 20px;
+  padding-left: 60px;
+  font-size: 1.7em;
+}
+
+h4{
+  font-size: 2em;
+}
+
+/*wadah konten budaya*/
+.isi{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*agar style bulet hilang*/
+.isi ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+/*style judul tiap budaya*/
+.isi ul li h4{
+  text-align: center;
+  padding: 10px 10px;
+}
+
+/*lebar video dan transisi hover*/
+.isi video{
+  width: 100%;
+  transition: .3s;
+}
+  
+/*styling border di tiap budaya, setting center menggunakan flexbox*/
+.isi ul li{
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 30px 50px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ /*settingan paragraf budaya*/
+.isi ul li p{
+  font-size: 1.5em;
+  padding-top: 15px;
+}
+/* Mengatur warna dan gaya tautan 'Baca Selengkapnya' */
+.isi li p a {
+  color: inherit;
+  text-decoration: none;
+}
+/* Mengatur efek hover pada tautan */
+.isi li p a:hover {
+  color: #007BFF;
+  text-decoration: underline;
+}
+
+
+/*settingan footer*/
+footer{
+  color: white;
+  font-size: 20px;
+  padding: 10px 10px;
+  background-color: rgba(0, 0, 0, 0.915);
+  text-align: center;
+  font-family: Times;
+  width: 100%;
+  bottom: 0;
+}
+
+
+/*ANIMASI*/
+
+/*hover warna pada menu navbar + cursor pointer*/
+nav ul li a:hover{
+  color: #ea1538;
+  transition: .3s;
+  cursor: pointer;
+}
+
+/*sedikit perbesar tombol lainnya + cursor pointer*/
+button:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/*mengurangi sedikit opacity video saat cursor di video + cursor pointer*/
+.isi video:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
