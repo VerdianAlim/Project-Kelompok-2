@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami</title>
+    <link rel="stylesheet" href="tentang.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+
+    <!--link dark mode-->
+<link id="theme-stylesheet" rel="stylesheet" href="darkttg.css">
+</head>
+
+<body>
+
+  <!--js nigth mode-->
+<button id="tombolmode" onclick="toggleDarkMode()">NightMode</button>  
+
+<!--container halaman-->
+<div class="ttgkami">
+  <div class="gambar">
+    <img src="gb29.jpg" alt="Gambar Budaya">
+  </div>
+
+  <!--visi misi-->
+ <h2>VISI MISI</h2>
+  <div class="deskripsi">
+    <p>Visi dari website budaya Indonesia adalah untuk melestarikan dan mempromosikan kekayaan budaya nusantara agar tetap hidup dan relevan di tengah perkembangan zaman. Kami bertujuan untuk memperkenalkan berbagai aspek budaya, seperti adat istiadat, seni tradisional, bahasa daerah, dan warisan sejarah kepada generasi muda, serta masyarakat luas. Dengan cara ini, kami berharap dapat meningkatkan kesadaran dan kebanggaan terhadap keberagaman budaya Indonesia, sehingga dapat diwariskan secara turun-temurun.</p>
+    <p>Misi kami adalah menyediakan platform edukatif dan informatif yang menampilkan konten berkualitas tentang budaya Indonesia, termasuk artikel, galeri foto, dan video dokumentasi. Kami juga berkomitmen untuk mendukung komunitas dan seniman lokal dengan memberikan ruang untuk menampilkan karya serta memperkenalkan berbagai kegiatan budaya. Melalui kolaborasi dengan berbagai pihak, kami ingin menjembatani tradisi lama dengan teknologi modern, agar budaya Indonesia dapat diakses dan diapresiasi oleh semua kalangan.</p>
+  </div>
+
+  <!--kontributor-->
+<h2>TIM KONTRIBUTOR</h2>
+    <div class="kontributors">
+            
+      <div class="kontributor">
+          <img src="dingin.jpg" alt="Kontributor 1">
+          <p>Andi Pangeran</p>
+      </div>
+      
+      <div class="kontributor">
+          <img src="dingin.jpg" alt="Kontributor 2">
+          <p>A. Faizul Akbar</p>
+      </div>
+      
+      <div class="kontributor">
+          <img src="dingin.jpg" alt="Kontributor 3">
+          <p>Verdian Alim H</p>
+      </div>
+    </div>
+    <!--tombol beranda-->
+    <button class="berandaButton" type="button"><a href="index.html">Beranda</a></button>
+</div>
+
+
+<script>
+// Fungsi untuk mengganti stylesheet
+function switchStyleSheet(isDarkMode) {
+  const stylesheet = document.getElementById('theme-stylesheet');
+  if (isDarkMode) {
+    stylesheet.href = 'ttgdark.css';
+    localStorage.setItem('darkMode', 'true');
+  } else {
+    stylesheet.href = 'tentang.css';
+    localStorage.setItem('darkMode', 'false');
+  }
+}
+
+// Fungsi untuk beralih mode
+function toggleDarkMode() {
+    const isCurrentlyDark = localStorage.getItem('darkMode') === 'true';
+    switchStyleSheet(!isCurrentlyDark);
+    
+    // Mengubah teks tombol
+    const button = document.getElementById('tombolmode');
+    button.textContent = isCurrentlyDark ? 'Mode Malam' : 'Mode Normal'; // Ubah teks tombol
+}
+
+
+// Saat halaman dimuat, terapkan preferensi pengguna
+window.onload = function() {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    switchStyleSheet(isDarkMode);
+    
+    // Mengubah teks tombol sesuai mode
+    const button = document.getElementById('tombolmode');
+    button.textContent = isDarkMode ? 'Mode Normal' : 'Mode Malam'; // Ubah teks tombol
+};
+</script>
+
+
+</body>
+</html>
