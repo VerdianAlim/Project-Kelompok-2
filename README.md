@@ -1,6 +1,6 @@
 Instruksi visit Website Budaya.ID
 1. Buka browser
-   Pastikan user menggunakan peramban web yang mendukung HTML5, seperti Google Chrome, Mozilla Firefox, Microsoft Edge, atau Safari.
+   Pastikan user menggunakan peramban web yang mendukung HTML5, seperti Google Chrome, Mozilla Firefox, Microsoft Edge.
 
 2. Masukkan Alamat Domain
    Ketik alamat domain website Budaya.ID:
